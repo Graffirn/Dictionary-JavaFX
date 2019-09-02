@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="280.0" prefWidth="450.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AddWindow">
+   <children>
+      <GridPane hgap="10.0" layoutX="125.0" layoutY="115.0" vgap="10.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="50.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="10.0" prefWidth="92.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="289.0" minWidth="10.0" prefWidth="228.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="English" textFill="#01579b" />
+            <Label text="Pronunciation" textFill="#01579b" GridPane.rowIndex="1" />
+            <Label text="Vietnamese" textFill="#01579b" GridPane.rowIndex="2" />
+            <TextField fx:id="engW" prefHeight="25.0" prefWidth="238.0" promptText="Insert English word..." style="-fx-background-color: #F5F5F5;" GridPane.columnIndex="1" />
+            <TextField fx:id="proW" promptText="Insert pronunciation..." style="-fx-background-color: #F5F5F5;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="vnW" promptText="Insert Vietnamese meaning..." style="-fx-background-color: #F5F5F5;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <Button fx:id="addBut" layoutX="195.0" layoutY="228.0" mnemonicParsing="false" onAction="#clickAdd" style="-fx-background-color: #01579B; -fx-border-width: 0;" text="Add" textFill="WHITE" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="195.0" AnchorPane.rightAnchor="195.0" />
+      <CheckBox fx:id="check" alignment="CENTER" contentDisplay="CENTER" layoutX="160.0" layoutY="160.0" mnemonicParsing="false" selected="true" text="Add to My word" textAlignment="CENTER" textFill="#01579b" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="160.0" AnchorPane.rightAnchor="160.0" />
+      <Label fx:id="alert" alignment="CENTER" contentDisplay="CENTER" layoutX="211.0" layoutY="198.0" text="Please insert full information" textFill="RED" visible="false" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" />
+   </children>
+</AnchorPane>

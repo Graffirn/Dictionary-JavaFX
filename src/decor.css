@@ -1,0 +1,79 @@
+.tab .tab-label {
+    -fx-background-color: transparent;
+    -fx-text-fill: #01579B;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-alignment: CENTER;
+}
+
+.tab {
+    -fx-background-color: #FFFFFF;
+    -fx-background-insets: 0.0;
+    -fx-background-radius: 0.0;
+    -fx-border-color: transparent;
+    -fx-padding: 0 20 0 20;
+}
+
+.tab:selected {
+    -fx-background-color: #01579B;
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+}
+
+.tab:selected .tab-label {
+    -fx-background-color: transparent;
+    -fx-text-fill: #FFFFFF;
+    -fx-padding: 0 0 0 0;
+}
+
+.tab-pane *.tab-header-background {
+    -fx-background-color: transparent;
+}
+
+.tab-pane:top *.tab-header-area {
+    -fx-background-inset: 0 0 0 0;
+    -fx-padding: 0.0em 0.0em 0.0em 0.0em;
+}
+
+.split-pane:horizontal > .split-pane-divider {
+    -fx-background-color: transparent;
+    -fx-padding: 0 0 0 0;
+    -fx-border-width: 0;
+
+}
+
+.split-pane:vertical > .split-pane-divider {
+    -fx-background-color: transparent;
+    -fx-padding: 0 0 0 0;
+    -fx-border-width: 0;
+
+}
+
+.split-pane {
+    -fx-padding: 0 0 0 0;
+}
+
+.text-area {
+    -fx-background-color: #FFFFFF;
+    -fx-border-width: 0;
+    -fx-background-radius: 0;
+}
+
+.nortext-area .content {
+    -fx-background-color: #FFFFFF;
+    -fx-border-width: 0;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0;
+}
+
+.specialTextAre .content {
+    -fx-background-color: #E0E0E0;
+    -fx-border-width: 0;
+    -fx-border-color: #FFFFFF;
+    -fx-border-radius: 0;
+}
+.tab:selected .focus-indicator{
+    -fx-focus-color: transparent;
+    -fx-border-color: transparent;
+}

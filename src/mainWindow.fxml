@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="rootPane" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+    <children>
+        <TabPane prefHeight="500.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <tabs>
+                <Tab text="Search">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" pickOnBounds="false" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <SplitPane dividerPositions="0.33" layoutX="20.0" layoutY="-38.0" pickOnBounds="false" prefHeight="461.0" prefWidth="800.0" style="-fx-border-width: 0; -fx-border-radius: 0;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <items>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <AnchorPane prefHeight="50.0" style="-fx-background-color: #01579B;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                                      <TextField fx:id="SearchBarWord" maxHeight="25.0" minHeight="25.0" onKeyPressed="#buttonPressed" onKeyTyped="#InputSearchBarChange" onMouseClicked="#MouseClickOnSearchBar" pickOnBounds="false" prefHeight="25.0" promptText="Enter your word here ..." style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="65.0" AnchorPane.topAnchor="12.0">
+                                             <cursor>
+                                                <Cursor fx:constant="TEXT" />
+                                             </cursor>
+                                             <padding>
+                                                <Insets bottom="5.0" left="5.0" right="60.0" top="5.0" />
+                                             </padding>
+                                          </TextField>
+                                                      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="214.0" layoutY="2.0" maxHeight="25.0" maxWidth="65.0" minHeight="25.0" mnemonicParsing="false" onAction="#getDefinition" pickOnBounds="false" prefWidth="55.0" style="-fx-background-color: #FFFFFF;" text="Search" textAlignment="CENTER" textFill="#01579b" AnchorPane.bottomAnchor="13.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="12.0">
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                                      </Button>
+                                       </children>
+                                    </AnchorPane>
+                                                <SplitPane dividerPositions="0.55" orientation="VERTICAL" prefHeight="371.0" prefWidth="317.0" style="-fx-background-color: #01579B; -fx-background-radius: 0; -fx-border-width: 0; -fx-padding: 0;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+                                                    <items>
+                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="136.0" prefWidth="315.0" style="-fx-border-width: 0; -fx-background-radius: 0;">
+                                                            <children>
+                                                                <ListView fx:id="Wordlist" layoutY="-42.0" onMouseClicked="#MouseClickOnWord" pickOnBounds="false" prefHeight="260.0" prefWidth="316.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                            </children>
+                                                        </AnchorPane>
+                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                            <children>
+                                                                <Label contentDisplay="CENTER" maxHeight="20.0" minHeight="20.0" pickOnBounds="false" text="Recents" textFill="WHITE" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                                                                <ListView fx:id="RecentList" onMouseClicked="#MouseClickOnWord" pickOnBounds="false" prefHeight="459.0" prefWidth="317.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0" />
+                                                            </children>
+                                                        </AnchorPane>
+                                                    </items>
+                                                </SplitPane>
+                                 </children>
+                              </AnchorPane>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #01579B;">
+                                 <children>
+                                    <HBox alignment="TOP_RIGHT" layoutX="274.0" layoutY="-3.0" pickOnBounds="false" prefHeight="50.0" prefWidth="200.0" spacing="5.0" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="12.0">
+                                       <children>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="25.0" maxWidth="80.0" minHeight="25.0" minWidth="80.0" mnemonicParsing="false" onAction="#addWord" pickOnBounds="false" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #FFFFFF;" text="Add word" textAlignment="CENTER" textFill="#01579b" />
+                                          <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="25.0" maxWidth="60.0" minHeight="25.0" minWidth="60.0" mnemonicParsing="false" onAction="#editWord" pickOnBounds="false" prefHeight="25.0" style="-fx-background-color: #FFFFFF;" text="Edit" textAlignment="CENTER" textFill="#01579b" />
+                                          <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="25.0" maxWidth="110.0" minHeight="25.0" minWidth="110.0" mnemonicParsing="false" onAction="#addToMW" pickOnBounds="false" prefHeight="25.0" style="-fx-background-color: #FFFFFF;" text="Add to My words" textAlignment="CENTER" textFill="#01579b" />
+                                          <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="25.0" maxWidth="60.0" minHeight="25.0" minWidth="60.0" mnemonicParsing="false" onAction="#speech" pickOnBounds="false" prefHeight="25.0" style="-fx-background-color: #FFFFFF;" text="Speak" textAlignment="CENTER" textFill="#01579b" />
+                                          <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="25.0" maxWidth="60.0" minHeight="25.0" minWidth="60.0" mnemonicParsing="false" onAction="#deleteWord" pickOnBounds="false" prefHeight="25.0" style="-fx-background-color: #FFFFFF;" text="Delete" textAlignment="CENTER" textFill="#01579b" />
+                                       </children>
+                                    </HBox>
+                                    <TextArea fx:id="txtDefinition" editable="false" layoutX="74.0" layoutY="47.0" pickOnBounds="false" prefHeight="200.0" prefWidth="200.0" styleClass="nortext-area" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
+                                 </children>
+                                        </AnchorPane>
+                                    </items>
+                                </SplitPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            <Tab text="My words">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" pickOnBounds="false" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.33" layoutX="20.0" layoutY="-38.0" prefHeight="461.0" prefWidth="800.0" style="-fx-background-color: #01579B; -fx-border-width: 0; -fx-background-radius: 0; -fx-border-color: #01579B; -fx-padding: 0;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <items>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #01579B; -fx-border-color: #01579B; -fx-border-radius: 0; -fx-border-width: 0;">
+                                 <children>
+                                    <ListView fx:id="mwList" onMouseClicked="#MouseClickOnWordMW" pickOnBounds="false" prefHeight="260.0" prefWidth="316.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
+                                    <TextField fx:id="SearchMW" layoutY="8.0" maxHeight="25.0" maxWidth="10.0" minHeight="25.0" onKeyPressed="#buttonPressedMW" onKeyTyped="#InputSearchBarChangeMW" onMouseClicked="#MouseClickOnSearchBar" onMousePressed="#MouseClickOnSearchBarMW" pickOnBounds="false" promptText="Enter your word here ..." style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="62.0" AnchorPane.topAnchor="12.0">
+                                       <cursor>
+                                          <Cursor fx:constant="TEXT" />
+                                       </cursor></TextField>
+                                    <Button layoutX="263.0" maxHeight="25.0" minHeight="25.0" mnemonicParsing="false" onAction="#getDefinitionMW" pickOnBounds="false" style="-fx-background-color: #FFFFFF;" text="Search" textFill="#01579b" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="12.0">
+                                       <effect>
+                                          <MotionBlur radius="0.0" />
+                                       </effect>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <HBox alignment="TOP_RIGHT" layoutX="274.0" layoutY="-3.0" pickOnBounds="false" prefHeight="50.0" prefWidth="200.0" spacing="5.0" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="12.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" onAction="#editWordMW" style="-fx-background-color: #FFFFFF;" text="Edit" textFill="#01579b" />
+                                          <Button mnemonicParsing="false" onAction="#speechMW" style="-fx-background-color: #FFFFFF;" text="Speak" textFill="#01579b" />
+                                          <Button mnemonicParsing="false" onAction="#deleteMWord" style="-fx-background-color: #FFFFFF;" text="Delete from My words" textFill="#01579b" />
+                                       </children>
+                                    </HBox>
+                                    <TextArea fx:id="mwDef" editable="false" layoutX="74.0" layoutY="47.0" pickOnBounds="false" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0; -fx-border-image-width: 0;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Google Translate">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;">
+                     <children>
+                        <Button fx:id="ggTran" layoutX="357.0" layoutY="395.0" mnemonicParsing="false" onAction="#goGoogle" style="-fx-background-color: #01579B; -fx-border-width: 0;" text="Translate" textFill="WHITE" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="350.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font></Button>
+                        <HBox layoutX="250.0" prefHeight="100.0" prefWidth="200.0" snapToPixel="false" spacing="20.0" AnchorPane.bottomAnchor="130.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="90.0">
+                           <children>
+                              <TextArea fx:id="ggInput" onKeyPressed="#enterGG" pickOnBounds="false" prefHeight="291.0" promptText="Insert document..." style="-fx-border-width: 0; -fx-padding: 0;" styleClass="specialTextAre" wrapText="true">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="TEXT" />
+                                 </cursor>
+                              </TextArea>
+                              <TextArea fx:id="ggResult" cache="true" editable="false" layoutX="410.0" layoutY="10.0" pickOnBounds="false" prefHeight="291.0" promptText="...definition" style="-fx-border-width: 0; -fx-padding: 0;" styleClass="specialTextAre" wrapText="true">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
+                              </TextArea>
+                           </children>
+                        </HBox>
+                        <AnchorPane layoutX="260.0" layoutY="-67.0" maxWidth="50.0" minHeight="50.0" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #01579B;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ImageView fitHeight="40.0" fitWidth="200.0" layoutX="702.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="5.0">
+                                 <image>
+                                    <Image url="@img/ic_g_translate_white_2x.png" />
+                                 </image>
+                              </ImageView>
+                           </children></AnchorPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>

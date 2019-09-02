@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Edit">
+   <children>
+      <Label fx:id="engWord" alignment="CENTER" layoutX="136.0" layoutY="33.0" textFill="#01579b" wrapText="true" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="25.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <GridPane hgap="15.0" layoutX="50.0" layoutY="55.0" vgap="10.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="65.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="74.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="161.0" minWidth="10.0" prefWidth="161.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Pronunciation" textFill="#01579b" />
+            <Label text="Defination" textFill="#01579b" GridPane.rowIndex="1" />
+            <TextField fx:id="pronunciationText" promptText="Insert pronunciation..." style="-fx-background-color: #F5F5F5;" GridPane.columnIndex="1" />
+            <TextField fx:id="defText" promptText="Insert defination..." style="-fx-background-color: #F5F5F5;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <Button fx:id="editButton" layoutX="124.0" layoutY="143.0" mnemonicParsing="false" onAction="#clickEdit" style="-fx-border-width: 0; -fx-background-color: #01579B;" text="Edit" textFill="WHITE" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="120.0" />
+      <Label fx:id="alert" alignment="CENTER" contentDisplay="CENTER" layoutX="136.0" layoutY="135.0" text="Please insert full information" textFill="RED" visible="false" AnchorPane.bottomAnchor="47.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
