@@ -1,1 +1,1 @@
-# Dictionary
+# Dictionary app using JavaFX
